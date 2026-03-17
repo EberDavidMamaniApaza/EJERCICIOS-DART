@@ -1,0 +1,21 @@
+import 'dart:io';
+
+void main() {
+  List<int> numeros = [];
+
+  print("¿Cuántos números desea ingresar?");
+  int n = int.parse(stdin.readLineSync()!);
+
+  for (int i = 0; i < n; i++) {
+    print("Ingrese un número:");
+    numeros.add(int.parse(stdin.readLineSync()!));
+  }
+
+  print("Números pares:");
+
+  for (int num in numeros) {
+    if (num % 2 == 0) {
+      print(num);
+    }
+  }
+}
